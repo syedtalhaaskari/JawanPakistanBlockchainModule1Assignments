@@ -14,3 +14,9 @@ contract Task1 {
         return num;
     }
 }
+
+contract Task2 {
+    function evaluate(int a, int b) pure external returns(int) {
+        return (a + b) - (a - b);
+    }
+}
