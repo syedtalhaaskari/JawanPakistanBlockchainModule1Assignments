@@ -27,3 +27,10 @@ contract Task3 {
         return a % 3;
     }
 }
+
+contract Task4 {
+    function average(int a, int b, int c) external pure returns (int){
+        require(a > 0 && b > 0 && c > 0, "Passed number should be greater than zero");
+        return (a + b + c) / 3;
+    }
+}
