@@ -20,3 +20,10 @@ contract Task2 {
         return (a + b) - (a - b);
     }
 }
+
+contract Task3 {
+    function find(int a) pure external returns(int) {
+        require(a > 0, "Passed number should be greater than zero");
+        return a % 3;
+    }
+}
