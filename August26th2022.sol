@@ -14,3 +14,21 @@ contract Task1 {
         return sum;
     }
 }
+
+contract Task2 {
+    uint[] S;
+
+    function nthTerm(uint n, uint a, uint b, uint c) external {
+        require(n > 3, "Nth Term should be greater than three.");
+        S = [a, b, c];
+
+        for (uint i = 3; i < n; i++) {
+            S.push(S[i - 1] + S[i - 2] + S[i - 3]);
+        }
+    }
+
+    function getNthTerm(uint n) external view returns(uint) {
+        require(n > 0, "Nth Term should be greater than zero.");
+        return S[n - 1];
+    }
+}
